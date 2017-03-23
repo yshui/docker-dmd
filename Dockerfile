@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y curl build-essential \
  && curl -fsS -o /tmp/install.sh https://dlang.org/install.sh \
  && bash /tmp/install.sh -p /dlang install -s "${COMPILER}-${COMPILER_VERSION}" \
  && rm /tmp/install.sh \
- && apt-get install -y gcc \
+ && apt-get install -y gcc libevent openssl \
  && rm -rf /var/cache/apt \
  && rm -rf /dlang/${COMPILER}-*/linux/bin32 \
  && rm -rf /dlang/${COMPILER}-*/linux/lib32 \
