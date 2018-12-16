@@ -9,5 +9,5 @@ RUN apt-get update && apt-get install -y curl build-essential \
     libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
     libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev \
     libxdg-basedir-dev libev-dev libpcre3-dev libgl1-mesa-dev libxcb1-dev \
-    asciidoc
+    asciidoc xvfb mesa-utils
 
