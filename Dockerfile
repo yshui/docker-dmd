@@ -1,23 +1,13 @@
-FROM ubuntu:16.04
+FROM debian:latest
 
-MAINTAINER Stefan Rohe <think@hotmail.de>
-
-ENV \
-  COMPILER=dmd \
-  COMPILER_VERSION=2.073.2
+MAINTAINER Yuxuan Shui
 
 RUN apt-get update && apt-get install -y curl build-essential \
- && curl -fsS -o /tmp/install.sh https://dlang.org/install.sh \
- && bash /tmp/install.sh -p /dlang install -s "${COMPILER}-${COMPILER_VERSION}" \
- && rm /tmp/install.sh \
- && apt-get install -y gcc libevent-2.0-5 openssl libevent-dev libssl-dev rsync \
- && rm -rf /var/cache/apt \
- && rm -rf /dlang/${COMPILER}-*/linux/bin32 \
- && rm -rf /dlang/${COMPILER}-*/linux/lib32 \
- && rm -rf /dlang/${COMPILER}-*/html \
- && rm -rf /dlang/dub-1.0.0/dub.tar.gz
+ && apt-get install -y gcc clang meson ninja-build xcb-proto libx11-dev \
+    libx11-xcb-dev libxext-dev libxcb-damage0-dev libxcb-xfixes0-dev \
+    libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev \
+    libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
+    libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev \
+    libxdg-basedir-dev libev-dev libpcre3-dev libgl1-mesa-dev libxcb1-dev \
+    asciidoc
 
-ENV \
-  PATH=/dlang/dub:/dlang/${COMPILER}-${COMPILER_VERSION}/linux/bin64:${PATH} \
-  LD_LIBRARY_PATH=/dlang/${COMPILER}-${COMPILER_VERSION}/linux/lib64 \
-  LIBRARY_PATH=/dlang/${COMPILER}-${COMPILER_VERSION}/linux/lib64 \
