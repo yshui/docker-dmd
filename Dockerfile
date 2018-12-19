@@ -17,3 +17,4 @@ RUN apt-get install -y --no-install-recommends libpixman-1-dev libdbus-1-dev \
     libconfig-dev libxdg-basedir-dev libev-dev libpcre3-dev
 RUN apt-get install -y --no-install-recommends libgl1-mesa-dev \
     xvfb mesa-utils xserver-xorg-core xauth libgl1-mesa-dri
+RUN apt-get install -y --no-install-recommends docbook-xml xsltproc
