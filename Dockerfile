@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:stable-backports
 
 MAINTAINER Yuxuan Shui
 
@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends ssh git curl asciidoc libxml2-utils \
     ca-certificates
-RUN apt-get install -y --no-install-recommends gcc clang-4.0 meson ninja-build
+RUN apt-get install -y --no-install-recommends gcc clang-6.0 meson ninja-build
 RUN apt-get install -y --no-install-recommends xcb-proto libx11-dev \
     libx11-xcb-dev libxext-dev libxcb-damage0-dev libxcb-xfixes0-dev \
     libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev \
