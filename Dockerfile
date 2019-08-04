@@ -19,5 +19,5 @@ RUN apt-get install -y --no-install-recommends libgl1-mesa-dev \
     xvfb mesa-utils xserver-xorg-core xauth libgl1-mesa-dri
 RUN apt-get install -y --no-install-recommends docbook-xml xsltproc
 RUN apt-get install -y --no-install-recommends uthash-dev
-RUN apt-get install -y --no-install-recommends python-pip
+RUN apt-get install -y --no-install-recommends python-pip python-setuptools
 RUN pip install xcffib
