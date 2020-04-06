@@ -20,6 +20,8 @@ RUN apt-get install -y --no-install-recommends libgl1-mesa-dev \
 RUN apt-get install -y --no-install-recommends docbook-xml xsltproc
 RUN apt-get install -y --no-install-recommends uthash-dev
 RUN apt-get install -y --no-install-recommends python-pip python-setuptools
+RUN apt-get install -y --no-install-recommends xdotool
+RUN apt-get install -y --no-install-recommends i3
 RUN pip install wheel
 RUN pip install xcffib
 RUN pip install pydbus
