@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 MAINTAINER Yuxuan Shui
 
@@ -19,9 +19,9 @@ RUN apt-get install -y --no-install-recommends libgl1-mesa-dev \
     xvfb mesa-utils xserver-xorg-core xauth libgl1-mesa-dri
 RUN apt-get install -y --no-install-recommends docbook-xml xsltproc
 RUN apt-get install -y --no-install-recommends uthash-dev
-RUN apt-get install -y --no-install-recommends python-pip python-setuptools
+RUN apt-get install -y --no-install-recommends python3-pip python3-setuptools
 RUN apt-get install -y --no-install-recommends xdotool
 RUN apt-get install -y --no-install-recommends i3
-RUN pip install wheel
-RUN pip install xcffib
-RUN pip install pydbus
+RUN pip3 install wheel
+RUN pip3 install xcffib
+RUN pip3 install pydbus
