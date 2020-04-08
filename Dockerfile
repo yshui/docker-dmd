@@ -25,3 +25,4 @@ RUN apt-get install -y --no-install-recommends i3
 RUN pip3 install wheel
 RUN pip3 install xcffib
 RUN pip3 install pydbus
+RUN echo 'alias python=python3' > ~/.bashrs
