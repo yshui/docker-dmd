@@ -22,7 +22,9 @@ RUN apt-get install -y --no-install-recommends uthash-dev
 RUN apt-get install -y --no-install-recommends python3-pip python3-setuptools
 RUN apt-get install -y --no-install-recommends xdotool
 RUN apt-get install -y --no-install-recommends i3
-RUN pip3 install wheel
-RUN pip3 install xcffib
-RUN pip3 install pydbus
 RUN ln -sf python3 /usr/bin/python
+RUN ln -sf pip3 /usr/bin/pip
+RUN pip install wheel
+RUN pip install xcffib
+RUN pip install dbus-next
+RUN apt-get install -y --no-install-recommends dbus
