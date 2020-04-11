@@ -27,4 +27,4 @@ RUN ln -sf pip3 /usr/bin/pip
 RUN pip install wheel
 RUN pip install xcffib
 RUN pip install dbus-next
-RUN apt-get install -y --no-install-recommends dbus
+RUN apt-get install -y --no-install-recommends dbus-x11
